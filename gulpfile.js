@@ -2,6 +2,7 @@ const gulp = require('gulp'),
     clean = require('gulp-clean');
     browserSync = require('browser-sync').create(),
     sass = require('gulp-sass');
+    autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('clean', function () {
     return gulp.src("src/css")
@@ -11,7 +12,11 @@ gulp.task('clean', function () {
 // Compile Sass
 gulp.task('sass', ['clean'],() => {
     return gulp.src(["src/sass/*.scss"])
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: ['last 3 versions', '> 1%', 'IE 9', 'IE 10', 'IE 11', 'Firefox ESR'],
+            cascade: false
+        }))
         .pipe(gulp.dest("src/css"))
         .pipe(browserSync.stream());
 });
