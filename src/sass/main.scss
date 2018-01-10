@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i');
+@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import "_reset";
+// @import "_brand";
+@include reset-css;
+// Variables
+// Styles
+$brand-color1: #071C21;
+$brand-color2: #F08A5D;
+$brand-color3: #FCFEFE;
+$brand-color4: #F9F7F7;
+$brand-color5: #C9D6DF;
+$brand-color6: #9BA6A5;
+$backgroundColor: #EAEAEA;
+$fontSize: 13px;
+$font-family: "Roboto",
+sans-serif;
+// Screen width
+$phones-width: 575px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+//
+* {
+    box-sizing: border-box;
+}
+
+// Main Style
+html,
+body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: $backgroundColor;
+    font-family: $font-family;
+    font-size: $fontSize;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $brand-color2;
+}
+
+a:hover {}
+
+.wrapper {
+    // width: 1004px;
+    // margin: 0 auto;
+    max-width: 1004px;
+    width: 100%;
+    padding: 40px 20px;
+}
+
+.center-aligment {
+    display: flex;
+    justify-content: center;
+}
+
+button,
+input[type=button] {
+    border: none;
+    background: $brand-color2;
+    border-radius: 5px;
+    color: $brand-color3;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: $brand-color1;
+    cursor: pointer;
+}
+
+// Page Style
+// Header styles
+.header {
+    background-color: $brand-color2; // height: 80px;
+    display: flex;
+    justify-content: center;
+    flex: 1 0 auto;
+    @media screen and (max-width: $tablet-width - 1) {
+        #menu-toggle:checked ~ nav {
+            display: block;
+        }
+    }
+
+    
+    .wrapper {
+        flex-flow: row nowrap;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width: $tablet-width - 1) {
+            flex-flow: row wrap;
+        }
+        .header-logo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            &-icon {
+                height: 40px;
+                width: 60px;
+                padding-right: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    object-fit: contain;
+                    max-width: 100%;
+                    height: 100%;
+                }
+            }
+            &-text {
+                font-weight: bold;
+                color: $brand-color3;
+                a {
+                    text-transform: none;
+                    color: $brand-color3;
+                }
+                a:hover {
+                    background: none;
+                    color: $brand-color3;
+                    text-transform: none;
+                }
+            }
+            @media screen and (max-width: $tablet-width - 1) {
+                display: flex;
+                flex: 1 0 auto;
+            }
+        }
+        .toggle-menu-button {
+            display: flex;
+            align-items: center;
+            .toggle {
+                cursor: pointer;
+                span {
+                    display: block;
+                    width: 33px;
+                    height: 4px;
+                    margin-bottom: 7px;
+                    position: relative;
+                    background: #fff;
+                    border-radius: 3px;
+                    z-index: 1;
+                }
+            }
+        }
+        #menu-toggle {
+            display: none;
+        }
+        .toggle {
+            display: none;
+            @media screen and (max-width: $tablet-width - 1) {
+                display: block;
+            }
+        }
+        nav {
+            @media screen and (max-width: $tablet-width - 1) {
+                display: flex;
+                flex: 1 0 auto;
+                text-align: center;
+            }
+            ul {
+                display: flex;
+                justify-content: space-between;
+                list-style-type: none;
+                width: 100%;
+                @media screen and (max-width: $tablet-width - 1) {
+                    flex-flow: column nowrap;
+                }
+                a {
+                    color: $brand-color3;
+                    padding: 10px;
+                    &:hover {
+                        color: $brand-color2;
+                        background-color: $brand-color3;
+                        border-radius: 5px;
+                    }
+                }
+            }
+            li {
+                display: inline-block;
+            }
+            @media screen and (max-width: $tablet-width - 1) {
+                display: none;
+                flex: 1 0 100%;
+                justify-content: center;
+                padding-top: 10px;
+
+            }
+        }
+    }
+}
+
+// Content Styles
+.content {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 0 auto;
+    margin-bottom: 20px;
+    &-fast-info {
+        min-height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        font-weight: 500;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/office.jpeg) no-repeat;
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .wrapper {
+            color: $brand-color3;
+            text-align: center;
+        }
+        &-big-title {
+            padding-bottom: 20px;
+            h1 {
+                font-size: 25px;
+                line-height: 1.3em;
+            }
+        }
+        &-small-title {
+            h3 {
+                font-size: 16px;
+            }
+        }
+    }
+    &-company {
+        background: $brand-color1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            min-height: 300px;
+            @media only screen and (max-width: $tablet-width - 1) {
+                flex-flow: column nowrap;
+                align-items: center;
+            }
+        }
+        &-photo {
+            background: url(../images/gabe.jpg) no-repeat;
+            max-width: 660px;
+            width: 100%;
+            background-size: cover;
+            background-position: center center;
+            height: 300px;
+        }
+        &-info {
+            max-width: 300px;
+            width: 100%;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @media only screen and (max-width: $tablet-width - 1) {
+                margin-top: 20px;
+                padding-left: 0px;
+            }
+            &-logo {
+                padding: 20px;
+                background: $brand-color2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex: 1;
+                @media only screen and (max-width: $tablet-width - 1) {
+                    min-height: 150px;
+                    height: 100%;
+                }
+                img {
+                    object-fit: contain;
+                    max-height: 100%;
+                    max-width: 100%;
+                    flex: 1;
+                }
+            }
+            &-type,
+            &-known,
+            &-location {
+                padding-bottom: 10px;
+                &-title {
+                    font-weight: bold;
+                    padding: 10px 0px;
+                    color: $brand-color2;
+                }
+                &-description {
+                    font-style: italic;
+                    color: $brand-color3;
+                }
+            }
+        }
+    }
+    &-stories {
+        display: flex;
+        justify-content: center;
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            background: $brand-color4;
+            padding: 20px;
+            @media only screen and (max-width: $tablet-width - 1) {
+                flex-flow: column nowrap;
+                align-items: center;
+            }
+        }
+        &-main {
+            border-right: 1px solid $brand-color5;
+            min-height: 100px;
+            max-width: 650px;
+            width: 100%;
+            @media only screen and (max-width: $tablet-width - 1) {
+                border-right: none;
+            }
+            &-story {
+                margin-right: 20px;
+                margin-bottom: 20px;
+                @media only screen and (max-width: $tablet-width - 1) {
+                    margin-right: 0px;
+                }
+                &-title {
+                    padding: 20px 0px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: $brand-color2;
+                    font-size: 18px;
+                }
+                &-date {
+                    padding-bottom: 10px;
+                }
+                &-text {
+                    line-height: 1.5em;
+                    font-weight: 300;
+                    text-align: justify;
+                }
+            }
+        }
+        &-more {
+            max-width: 300px;
+            width: 100%;
+            padding: 20px 0px 0px 10px;
+            @media only screen and (max-width: $tablet-width - 1) {
+                padding-top: 20px;
+                padding-left: 0px;
+            }
+            @media only screen and (max-width: $phones-width - 1) {
+                max-width: 100%;
+            }
+            &-title {
+                font-weight: bold;
+                padding-bottom: 20px;
+                text-transform: uppercase;
+                color: $brand-color2;
+                font-size: 18px;
+            }
+            &-story {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 30px;
+                word-wrap: break-word;
+                @media only screen and (max-width: $tablet-width - 1) {
+                    flex-flow: column nowrap;
+                    align-items: center;
+                }
+               
+                &-photo {
+                    min-width: 100px;
+                    width: 100px;
+                    height: 80px;
+                    margin-bottom: 20px;
+                    @media only screen and (max-width: $tablet-width - 1) {
+                        min-width: 300px;
+                        max-width: 300px;
+                        width: 100%;
+                        max-height: 150px;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                    }
+                    img {
+                        object-fit: contain;
+                        max-height: 100%;
+                        max-width: 100%;
+                        @media only screen and (max-width: $tablet-width - 1) {
+                            flex: 0 0 auto;
+                        }
+                    }
+                }
+                &-text {
+                    max-width: 180px;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 10px;
+                    @media only screen and (max-width: $tablet-width - 1) {
+                        max-width: inherit;
+                        padding: 0px;
+                    }
+                    @media only screen and (max-width: $phones-width - 1) {
+                        max-width: inherit !important;
+                    }
+                    &-title {
+                        font-weight: bold;
+                        font-style: italic;
+                        padding-bottom: 5px;
+                    }
+                    &-position {
+                        padding-bottom: 5px;
+                        color: $brand-color2;
+                    }
+                    &-workplace {
+                        padding-bottom: 20px;
+                        color: $brand-color6;
+                    }
+                    &-read-btn {
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Footer Styles
+.footer {
+    background-color: $brand-color1;
+    color: $brand-color3;
+    display: flex;
+    justify-content: center;
+    flex: 1 0 auto;
+    &-copyright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
