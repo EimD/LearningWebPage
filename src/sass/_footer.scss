@@ -1,0 +1,13 @@
+// Footer Styles
+.footer {
+    background-color: $brand-color1;
+    color: $brand-color3;
+    display: flex;
+    justify-content: center;
+    flex: 1 0 auto;
+    &-copyright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

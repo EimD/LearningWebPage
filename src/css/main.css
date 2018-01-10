@@ -1,99 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i");
 @import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-/* http://meyerweb.com/eric/tools/css/reset/ 
-    v2.0 | 20110126
-    License: none (public domain)
-    */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-* {
-  box-sizing: border-box; }
-
-html,
-body {
-  height: 100%; }
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: #EAEAEA;
-  font-family: "Roboto", sans-serif;
-  font-size: 13px; }
-
-a {
-  text-decoration: none;
-  display: block;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #F08A5D; }
-
-.wrapper {
-  max-width: 1004px;
-  width: 100%;
-  padding: 40px 20px; }
-
-.center-aligment {
-  display: flex;
-  justify-content: center; }
-
-button,
-input[type=button] {
-  border: none;
-  background: #F08A5D;
-  border-radius: 5px;
-  color: #FCFEFE;
-  padding: 10px 15px;
-  font-weight: bold;
-  font-size: 12px;
-  text-align: center;
-  text-transform: uppercase; }
-
-button:hover {
-  background: #071C21;
-  cursor: pointer; }
-
 .header {
   background-color: #F08A5D;
   display: flex;
@@ -401,3 +307,97 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+    */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+html,
+body {
+  height: 100%; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #EAEAEA;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px; }
+
+a {
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #F08A5D; }
+
+.wrapper {
+  max-width: 1004px;
+  width: 100%;
+  padding: 40px 20px; }
+
+.center-aligment {
+  display: flex;
+  justify-content: center; }
+
+button,
+input[type=button] {
+  border: none;
+  background: #F08A5D;
+  border-radius: 5px;
+  color: #FCFEFE;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase; }
+
+button:hover {
+  background: #071C21;
+  cursor: pointer; }
