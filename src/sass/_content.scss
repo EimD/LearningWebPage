@@ -17,7 +17,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/office.jpeg) no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/office.jpeg) no-repeat;
             background-size: cover;
             background-position: center center;
             width: 100%;
@@ -128,10 +128,13 @@
             width: 100%;
             @media only screen and (max-width: $tablet-width - 1) {
                 border-right: none;
+                border-bottom: 1px solid $brand-color5;
+                
             }
             &-story {
                 margin-right: 20px;
                 margin-bottom: 20px;
+                line-height: 25px;
                 @media only screen and (max-width: $tablet-width - 1) {
                     margin-right: 0px;
                 }
@@ -141,6 +144,7 @@
                     text-transform: uppercase;
                     color: $brand-color2;
                     font-size: 18px;
+                    text-align: center;
                 }
                 &-date {
                     padding-bottom: 10px;
@@ -149,6 +153,22 @@
                     line-height: 1.5em;
                     font-weight: 300;
                     text-align: justify;
+                }
+                &-read-more {
+                    margin-top: 20px;
+                }
+                &-feedback-user {
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-top: 40px;
+
+                    &-picture {}
+
+                    &-information {
+                        &-postition {}
+
+                        &-name {}
+                    }
                 }
             }
         }
@@ -179,12 +199,12 @@
                     flex-flow: column nowrap;
                     align-items: center;
                 }
-               
                 &-photo {
                     min-width: 100px;
                     width: 100px;
                     height: 80px;
                     margin-bottom: 20px;
+
                     @media only screen and (max-width: $tablet-width - 1) {
                         min-width: 300px;
                         max-width: 300px;
@@ -199,7 +219,7 @@
                         max-height: 100%;
                         max-width: 100%;
                         @media only screen and (max-width: $tablet-width - 1) {
-                            flex: 0 0 auto;
+                            flex: none;
                         }
                     }
                 }
@@ -210,11 +230,8 @@
                     flex-direction: column;
                     padding-left: 10px;
                     @media only screen and (max-width: $tablet-width - 1) {
-                        max-width: inherit;
+                        max-width: 100%;
                         padding: 0px;
-                    }
-                    @media only screen and (max-width: $phones-width - 1) {
-                        max-width: inherit !important;
                     }
                     &-title {
                         font-weight: bold;
