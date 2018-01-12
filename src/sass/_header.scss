@@ -1,0 +1,112 @@
+// Header styles
+.header {
+    background-color: $brand-color2;
+    display: flex;
+    justify-content: center;
+    flex: 1 0 auto;
+    @media screen and (max-width: $tablet-width - 1) {
+        #menu-toggle:checked ~ nav {
+            display: block;
+        }
+    }
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width: $tablet-width - 1) {
+            flex-wrap: wrap;
+        }
+        .header-logo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            &-icon {
+                background: url(../images/logo-light.png) no-repeat;
+                height: 40px;
+                width: 200px;
+                background-size: contain;
+                background-position: center;
+            }
+            &-text {
+                font-weight: bold;
+                color: $brand-color3;
+                a {
+                    text-transform: none;
+                    color: $brand-color3;
+                }
+                a:hover {
+                    background: none;
+                    color: $brand-color3;
+                    text-transform: none;
+                }
+            }
+            @media screen and (max-width: $tablet-width - 1) {
+                display: flex;
+                flex: 1 0 auto;
+            }
+        }
+        .toggle-menu-button {
+            display: flex;
+            align-items: center;
+            
+            .toggle {
+                display: none;
+                @media screen and (max-width: $tablet-width - 1) {
+                    display: block;
+                }
+                cursor: pointer;
+                span {
+                    display: block;
+                    width: 33px;
+                    height: 4px;
+                    margin-bottom: 7px;
+                    background: #fff;
+                    border-radius: 3px;
+                    z-index: 1;
+                }
+            }
+        }
+        #menu-toggle {
+            display: none;
+        }
+        nav {
+            @media screen and (max-width: $tablet-width - 1) {
+                display: flex;
+                flex: 1 0 auto;
+                text-align: center;
+            }
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                @media screen and (max-width: $tablet-width - 1) {
+                    flex-flow: column nowrap;
+                }
+
+                li {
+                    display: inline-block;
+
+                    a {
+                        color: $brand-color3;
+                        padding: 10px;
+
+                        &:hover {
+                            color: $brand-color2;
+                            background-color: $brand-color3;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+
+            @media screen and (max-width: $tablet-width - 1) {
+                display: none;
+                flex: 1 0 100%;
+                justify-content: center;
+                padding-top: 10px;
+            }
+        }
+    }
+}
