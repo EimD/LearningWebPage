@@ -48,14 +48,18 @@
         .toggle-menu-button {
             display: flex;
             align-items: center;
+            
             .toggle {
+                display: none;
+                @media screen and (max-width: $tablet-width - 1) {
+                    display: block;
+                }
                 cursor: pointer;
                 span {
                     display: block;
                     width: 33px;
                     height: 4px;
                     margin-bottom: 7px;
-                    position: relative;
                     background: #fff;
                     border-radius: 3px;
                     z-index: 1;
@@ -65,39 +69,38 @@
         #menu-toggle {
             display: none;
         }
-        .toggle {
-            display: none;
-            @media screen and (max-width: $tablet-width - 1) {
-                display: block;
-            }
-        }
         nav {
             @media screen and (max-width: $tablet-width - 1) {
                 display: flex;
                 flex: 1 0 auto;
                 text-align: center;
             }
+
             ul {
                 display: flex;
                 justify-content: space-between;
-                list-style-type: none;
                 width: 100%;
+
                 @media screen and (max-width: $tablet-width - 1) {
                     flex-flow: column nowrap;
                 }
-                a {
-                    color: $brand-color3;
-                    padding: 10px;
-                    &:hover {
-                        color: $brand-color2;
-                        background-color: $brand-color3;
-                        border-radius: 5px;
+
+                li {
+                    display: inline-block;
+
+                    a {
+                        color: $brand-color3;
+                        padding: 10px;
+
+                        &:hover {
+                            color: $brand-color2;
+                            background-color: $brand-color3;
+                            border-radius: 5px;
+                        }
                     }
                 }
             }
-            li {
-                display: inline-block;
-            }
+
             @media screen and (max-width: $tablet-width - 1) {
                 display: none;
                 flex: 1 0 100%;
